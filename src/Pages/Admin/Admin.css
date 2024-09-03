@@ -1,0 +1,61 @@
+/* General Styles for Admin Page */
+.admin {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    background-color: white; /* Light background color for the admin panel */
+  }
+  
+  /* Sidebar Styles */
+  .sidebar {
+    margin-top: 20px;
+    width: 250px; /* Fixed width for the sidebar */
+    background-color: #ffffff; /* White background for the sidebar */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    padding: 20px; /* Padding inside the sidebar */
+    position: relative; /* Allows positioning of elements inside */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+  }
+  
+  /* Content Area Styles */
+  .admin-content {
+    height: 100vh; /* Full viewport height */
+
+    flex: 1; /* Take up the remaining space */
+    padding: 20px; /* Padding around the content */
+    overflow-y: auto; /* Allows scrolling if content overflows */
+    background-color: #ffffff; /* White background for the content area */
+  }
+  
+  /* Heading Style for Admin Content */
+  .admin-content h1 {
+    font-size: 1.75rem; /* Larger font size for headings */
+    font-weight: 600; /* Bold text */
+    color: #333; /* Dark color for readability */
+    margin-bottom: 20px; /* Space below headings */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 200px; /* Adjust sidebar width for smaller screens */
+      padding: 15px; /* Adjust padding */
+    }
+  
+    .admin-content {
+      padding: 15px; /* Adjust padding */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .sidebar {
+      width: 100%; /* Full width on very small screens */
+      position: relative; /* Adjust positioning */
+      box-shadow: none; /* Remove shadow */
+    }
+  
+    .admin-content {
+      margin-top: 70px; /* Adjust top margin if needed */
+    }
+  }
+  

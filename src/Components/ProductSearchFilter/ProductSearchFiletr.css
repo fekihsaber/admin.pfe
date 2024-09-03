@@ -1,0 +1,25 @@
+.product-search-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .search-bar, .filter {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .search-bar input {
+    padding: 10px;
+    flex: 1;
+  }
+  
+  .search-bar button, .filter button {
+    padding: 10px 20px;
+  }
+  
+  .filter select {
+    padding: 10px;
+  }
+  

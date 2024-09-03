@@ -1,0 +1,45 @@
+/* General Styles for the App Component */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif; /* Use a clean, modern font */
+  background-color: #f4f4f4; /* Light background color for a clean look */
+  color: #333; /* Dark text color for readability */
+}
+
+div {
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
+/* Container for the Main Content */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the container takes full viewport height */
+}
+
+/* Navbar Specific Styles */
+.navbar {
+  position: fixed; /* Keeps the navbar at the top */
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures navbar stays above other content */
+}
+
+/* Admin Page Styles */
+.admin {
+  padding-top: 70px; /* Ensures content doesn't overlap with the fixed navbar */
+  padding: 20px; /* General padding for content */
+  margin: 0 auto;
+  max-width: 1200px; /* Maximum width for large screens */
+  background-color: #fff; /* White background for the content area */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .admin {
+    padding-top: 60px; /* Adjust padding for smaller screens */
+    padding: 15px; /* Adjust general padding for smaller screens */
+  }
+}

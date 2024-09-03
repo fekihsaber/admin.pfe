@@ -1,0 +1,78 @@
+/* AddProduct Container */
+.addproduct {
+    padding: 100px;
+    padding-left: 150px;
+    padding-top: 100px;
+    background-color: white; /* Light background for the form */
+    border-radius: 8px; /* Rounded corners */
+    max-width: 600px; /* Max width for form */
+    margin: 0 auto; /* Center the form */
+  }
+  
+  /* Field Container */
+  .addproduct-itemfield {
+    margin-bottom: 20px; /* Space between fields */
+  }
+  
+  /* Field Labels */
+  .addproduct-itemfield p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333; /* Dark color for labels */
+    margin-bottom: 8px; /* Space below the label */
+  }
+  
+  /* Input Fields */
+  .addproduct-itemfield input,
+  .add-product-selector {
+    width: 100%; /* Full width for inputs */
+    padding: 10px;
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 1rem;
+    box-sizing: border-box; /* Include padding and border in width */
+  }
+  
+  /* Price Section */
+  .addproduct-price {
+    display: flex;
+    justify-content: space-between; /* Space out the price fields */
+    gap: 20px; /* Space between price fields */
+  }
+  
+  /* Thumbnail Image */
+  .addproduct-thumnail-img {
+    width: 100%; /* Full width */
+    max-height: 200px; /* Maximum height */
+    object-fit: cover; /* Cover the container */
+    border-radius: 4px; /* Rounded corners */
+    margin-bottom: 10px; /* Space below the image */
+    cursor: pointer; /* Pointer cursor for clickable image */
+  }
+  
+  /* Button */
+  .addproduct-btn {
+    background-color: #007bff; /* Primary color */
+    color: #fff; /* White text */
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px; /* Rounded corners */
+    font-size: 1rem;
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for hover effects */
+  }
+  
+  /* Button Hover Effect */
+  .addproduct-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .addproduct-price {
+      flex-direction: column; /* Stack price fields vertically */
+      gap: 10px; /* Reduced space between price fields */
+    }
+  }
+  

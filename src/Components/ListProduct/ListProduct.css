@@ -1,0 +1,127 @@
+/* Container for both Sidebar and ListProduct */
+.listproduct-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 250px; /* Adjust this value based on your sidebar width */
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+  transition: margin-left 0.3s ease;
+}
+
+/* ListProduct */
+.listproduct {
+  flex: 1; /* Allows ListProduct to take up the remaining space */
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+}
+
+/* Header */
+.listproduct h1 {
+  font-size: 1.8rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Product List Header */
+.listproduct-format-main {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr 2fr 1fr;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Titles */
+.listproduct-format-main p {
+  font-weight: 600;
+  color: #555;
+}
+
+/* Product Item Styles */
+.listproduct-allproduct {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.listproduct-product {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Remove Icon */
+.listproduct-remove-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.listproduct-remove-icon:hover {
+  transform: scale(1.1);
+  opacity: 0.7;
+}
+
+/* Divider */
+.listproduct hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 10px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .listproduct-container {
+    margin-left: 0; /* Adjust the margin-left for smaller screens */
+    padding: 10px;
+  }
+
+  .listproduct {
+    padding: 15px;
+  }
+
+  .listproduct-format-main {
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:
+      "img title title"
+      "priceold pricenew category"
+      "remove remove remove";
+    row-gap: 10px;
+  }
+
+  .listproduct-product {
+    grid-area: img;
+  }
+
+  .listproduct-format-main p:nth-child(2) {
+    grid-area: title;
+  }
+
+  .listproduct-format-main p:nth-child(3) {
+    grid-area: priceold;
+  }
+
+  .listproduct-format-main p:nth-child(4) {
+    grid-area: pricenew;
+  }
+
+  .listproduct-format-main p:nth-child(5) {
+    grid-area: category;
+  }
+
+  .listproduct-remove-icon {
+    grid-area: remove;
+    justify-self: end;
+  }
+}

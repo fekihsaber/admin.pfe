@@ -1,0 +1,89 @@
+/* Dashboard Container */
+.dashboard {
+    margin-left: 260px; /* Adjust based on the width of your sidebar */
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for the dashboard */
+    min-height: calc(100vh - 70px); /* Full height minus the navbar height */
+    margin-top: 70px; /* Space for the navbar */
+    overflow: hidden; /* Hide overflow to remove scroll */
+  }
+  
+  /* Dashboard Title */
+  .dashboard h1 {
+    font-size: 2rem; /* Large font size for the title */
+    font-weight: 700;
+    color: #333; /* Dark text color for contrast */
+    margin: 0 auto 20px; /* Center title and space below it */
+    text-align: center; /* Center align the title */
+    border-bottom: 2px solid #e0e0e0; /* Subtle border beneath the title */
+    padding-bottom: 10px; /* Padding below the title text */
+  }
+  
+  /* Dashboard Info Section */
+  .dashboard-info {
+    display: flex;
+    justify-content: space-around; /* Space items evenly */
+    gap: 20px; /* Space between items */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  }
+  
+  /* Dashboard Info Item */
+  .dashboard-item {
+    background-color: #fff; /* White background for items */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px; /* Padding inside items */
+    flex: 1; /* Items take equal space */
+    text-align: center; /* Center text inside items */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+    cursor: pointer; /* Pointer cursor on hover */
+    max-width: 300px; /* Max width for responsive design */
+  }
+  
+  /* Dashboard Info Item Title */
+  .dashboard-item p {
+    font-size: 1.125rem; /* Slightly larger font size */
+    color: #555; /* Darker color for the label */
+    margin: 0; /* Remove default margin */
+  }
+  
+  /* Dashboard Info Item Value */
+  .dashboard-item span {
+    display: block;
+    font-size: 2rem; /* Larger font size for the value */
+    font-weight: 700; /* Bold value text */
+    color: #333; /* Dark text color */
+    margin-top: 10px; /* Space above the value */
+  }
+  
+  /* Hover Effect for Dashboard Items */
+  .dashboard-item:hover {
+    background-color: #bad4ea; /* Slightly darker background on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .dashboard {
+      margin-left: 240px; /* Adjust if the sidebar width changes */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .dashboard {
+      margin-left: 200px; /* Further adjust for smaller screens */
+    }
+    
+    .dashboard-info {
+      flex-direction: column; /* Stack items vertically on small screens */
+      gap: 10px; /* Reduce gap between items */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .dashboard {
+      margin-left: 0; /* Remove sidebar margin on very small screens */
+      padding: 15px; /* Adjust padding */
+    }
+  }
+  

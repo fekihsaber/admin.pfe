@@ -1,0 +1,113 @@
+/* General Styles for Sidebar */
+.sidebar {
+    width: 260px; /* Sidebar width */
+    background-color: #ffffff; /* White background for a clean look */
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
+    padding: 20px; /* Padding inside the sidebar */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    height: 100vh; /* Full viewport height */
+    position: fixed; /* Fixed position to stay in place */
+    top: 0;
+    left: 0;
+    transition: width 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+  }
+  
+  /* Sidebar Item Styles */
+  .sidebar-item {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    padding: 15px 20px; /* Horizontal padding for better spacing */
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 12px; /* Space between items */
+    transition: background-color 0.3s ease, transform 0.2s ease, padding-left 0.3s ease; /* Smooth transitions */
+    cursor: pointer; /* Pointer cursor on hover */
+    position: relative; /* Positioning for pseudo-element */
+  }
+  
+  /* Sidebar Item Image */
+  .sidebar-item img {
+    height: 28px; /* Icon size */
+    width: 28px; /* Set width to match height */
+    margin-right: 15px; /* Space between icon and text */
+    transition: transform 0.2s ease; /* Smooth icon transition */
+  }
+  
+  /* Sidebar Item Text */
+  .sidebar-item p {
+    font-size: 1rem; /* Font size */
+    color: #333; /* Dark color for text */
+    margin: 0; /* Remove default margin */
+    transition: color 0.3s ease; /* Smooth text color transition */
+  }
+  
+  /* Hover Effect for Sidebar Items */
+  .sidebar-item:hover {
+    background-color: #f0f0f0; /* Slightly darker background on hover */
+    transform: translateX(10px); /* Slide effect on hover */
+    padding-left: 25px; /* Indentation effect */
+  }
+  
+  .sidebar-item:hover img {
+    transform: scale(1.1); /* Slightly enlarge icon on hover */
+  }
+  
+  .sidebar-item:hover p {
+    color: #007bff; /* Change text color on hover */
+  }
+  
+  /* Active Link Styles */
+  .sidebar-item.active {
+    background-color: #007bff; /* Highlight color for active item */
+    color: #ffffff; /* White text color */
+  }
+  
+  .sidebar-item.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 5px;
+    height: calc(100% - 20px); /* Adjust height to match padding */
+    background-color: #ffb400; /* Accent color */
+    transform: translateY(-50%);
+    border-radius: 5px 0 0 5px; /* Rounded left corners */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .sidebar {
+      width: 240px; /* Adjust width for medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 200px; /* Further adjustment for smaller screens */
+    }
+  
+    .sidebar-item p {
+      font-size: 0.9rem; /* Slightly smaller font size */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .sidebar {
+      width: 100%; /* Full width on very small screens */
+      height: auto; /* Auto height */
+      position: static; /* Static positioning */
+      box-shadow: none; /* Remove shadow */
+      padding: 15px; /* Adjust padding */
+    }
+  
+    .sidebar-item {
+      padding: 10px; /* Adjust padding for smaller screens */
+      margin-bottom: 10px; /* Adjust space between items */
+    }
+  
+    .sidebar-item img {
+      height: 24px; /* Smaller icon size */
+      width: 24px; /* Adjust width */
+    }
+  }
+  

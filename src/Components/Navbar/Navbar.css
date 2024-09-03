@@ -1,0 +1,57 @@
+/* General Styles for the Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Adjusted padding for consistency */
+    background-color: #8cacb5; /* Background color matching previous styles */
+    color: #fff; /* Text color for contrast */
+    height: 70px; /* Consistent height with previous designs */
+    position: fixed; /* Fixed position for a persistent navbar */
+    width: 100%; /* Full-width navbar */
+    top: 0; /* Positioned at the top of the viewport */
+    left: 0; /* Aligns to the left edge */
+    z-index: 1000; /* Ensures navbar is above other content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-bottom: 1px solid #ddd; /* Light bottom border for a modern touch */
+    transition: background-color 0.3s ease; /* Smooth transition for background color changes */
+  }
+  
+  /* Logo Styles */
+  .nav-logo {
+    height: 90px; /* Consistent logo size */
+    margin: 80px; /* Adjusted margin to move the logo to the right */
+  }
+  
+  /* Profile Icon Styles */
+  .nav-profile {
+    height: 60px; /* Consistent profile icon size */
+    border-radius: 80%; /* Circular profile icon */
+    margin: 30px; /* Adjusted margin to move the profile icon to the left */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+    background: white;
+  }
+  
+  /* Profile Icon Hover Effects */
+  .nav-profile:hover {
+    transform: scale(1.1); /* Slight enlargement on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  }
+  
+  /* Navbar Responsive Design */
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 10px 15px; /* Adjusted padding for smaller screens */
+    }
+  
+    .nav-logo {
+      height: 40px; /* Reduced logo size for smaller screens */
+      margin-right: 15px; /* Adjusted margin for smaller screens */
+    }
+  
+    .nav-profile {
+      height: 35px; /* Reduced profile icon size for smaller screens */
+      margin-left: 15px; /* Adjusted margin for smaller screens */
+    }
+  }
+  
